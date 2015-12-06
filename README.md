@@ -1,5 +1,5 @@
 # VSCode-ja-docker
-[Visual Source Code](https://code.visualstudio.com/)のコンテナです。X Windowのプロトコルをトンネルで転送して表示させます。
+[Visual Studio Code](https://code.visualstudio.com/)のコンテナです。X Windowのプロトコルをトンネルで転送して表示させます。
 日本語入力として[mozc](https://github.com/google/mozc)と[uim](https://code.google.com/p/uim/)、ブラウザとして[firefox](https://www.mozilla.org/firefox/)を組み込んでいます。
 
 ## build
@@ -33,5 +33,5 @@ Mac用のscriptではおそらくうまくいかないので、
 	
 
 ## FIXME
-* Visual Source Codeの最新版ダウンロードは、どのURLから行うようにすればよいのでしょう？
+* Visual Studio Codeの最新版ダウンロードは、どのURLから行うようにすればよいのでしょう？
 * docker-start-containerのWindows対応
