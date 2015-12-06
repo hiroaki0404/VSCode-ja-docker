@@ -1,0 +1,10 @@
+#!/bin/bash
+DOCKER_HOST="dev"
+CUSER="docker"
+CONTAINER_NAME=$1
+shift
+DOCKER_OPT=$(docker-machine config $DOCKER_HOST)
+CONTAINER_ID=$(docker $DOCKER_OPT run -d -P -v /Users:/Users $CONTAINER_NAME)
+SSH_PORT=$(docker $DOCKER_OPT port $CONTAINER_ID | cut -d : -f 2)
+DOCKER_IP=$(docker-machine ip $DOCKER_HOST)
+ssh -X $DOCKER_IP -p $SSH_PORT -l $CUSER $@
